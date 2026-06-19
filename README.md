@@ -1,45 +1,111 @@
-# 🧭 Telegram 导航
+<h1 align="center">
+  <img src="https://meshbit.github.io/TelegramNavigation/assets/images/logo.svg" height="40" alt="Telegram 导航">
+</h1>
+<p align="center"><strong>精心整理的 Telegram 群组、频道、机器人导航站</strong></p>
+<p align="center">
+  <a href="https://meshbit.github.io/TelegramNavigation/"><img src="https://img.shields.io/badge/在线访问-2AABEE?style=for-the-badge"></a>
+  <a href="https://github.com/meshbit/TelegramNavigation/tree/source"><img src="https://img.shields.io/badge/源码-source--branch-orange?style=for-the-badge"></a>
+  <br>
+  <a href="https://github.com/meshbit/tgnav"><img src="https://img.shields.io/badge/相关项目-tgnav-lightgrey?style=for-the-badge"></a>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/分类-15-2AABEE">
+  <img src="https://img.shields.io/badge/条目-1436+-2AABEE">
+  <img src="https://img.shields.io/badge/Hugo-v0.126.1-ff4088">
+  <img src="https://img.shields.io/badge/主题-WebStack_Hugo-blue">
+  <img src="https://img.shields.io/badge/部署-GitHub_Pages-brightgreen">
+</p>
 
-[🌐 在线访问](https://meshbit.github.io/TelegramNavigation/) · [📦 GitHub 仓库](https://github.com/meshbit/TelegramNavigation)
+---
 
-> 精心整理的 Telegram 群组、频道、机器人合集 — 基于 Hugo + WebStack-Hugo 主题
+## 简介
 
-## 📊 数据统计
+本导航站收集了大量优质 Telegram 资源，涵盖**群组**、**频道**、**机器人**三大类型，分 **15 个分类**，共收录 **1,436+ 条目**。
 
-- **总收录**：1436 条 · **频道**：1200+ 个 · **群组**：6 个 · **机器人**：200+ 个 · **分类**：15 个
+基于 [WebStack-Hugo](https://github.com/shenweiyan/WebStack-Hugo) 主题构建，响应式设计，支持暗色模式，适配 PC 和移动端。
 
-## 🛠️ 技术栈
+## 数据概览
 
-- [Hugo](https://gohugo.io/) — 静态站点生成器
-- [WebStack-Hugo](https://github.com/shenweiyan/WebStack-Hugo) — 网址导航主题
-- 部署于 GitHub Pages
+| 分类 | 数量 |
+|------|:----:|
+| 资源频道 | 904 |
+| 中文社区 | 112 |
+| 趣味工具 | 89 |
+| 娱乐休闲 | 66 |
+| 群组管理 | 64 |
+| 新闻资讯 | 50 |
+| 搜索机器人 | 40 |
+| 技术开发 | 37 |
+| 科学上网 | 31 |
+| 播客与媒体 | 15 |
+| 加密货币 | 12 |
+| 抽奖机器人 | 8 |
+| 购物优惠 | 5 |
+| 地区群组 | 2 |
+| 学习教育 | 1 |
+| **合计** | **1,436** |
 
-## 🚀 本地开发
+## 技术栈
+
+- **[Hugo](https://gohugo.io/)** — 静态网站生成器 (v0.126.1 Extended)
+- **[WebStack-Hugo](https://github.com/shenweiyan/WebStack-Hugo)** — 导航站主题
+- **GitHub Pages** — 托管与自动部署
+
+## 本地开发
 
 ```bash
-# 安装 Hugo Extended
-# Windows: scoop install hugo-extended 或下载二进制
-
-# 克隆并启动
-git clone --recurse-submodules https://github.com/meshbit/TelegramNavigation.git
+# 克隆源码
+git clone -b source https://github.com/meshbit/TelegramNavigation.git
 cd TelegramNavigation
+
+# 拉取主题子模块
+git submodule update --init
+
+# 安装 Hugo Extended
+# macOS:  brew install hugo
+# Windows: choco install hugo-extended
+
+# 启动开发服务器
 hugo server
 
 # 构建
-hugo
+hugo --baseURL https://meshbit.github.io/TelegramNavigation/ --minify
 ```
 
-## 📁 项目结构
+## 项目结构
 
 ```
-├── config.toml          # 站点配置
+.
+├── config.toml              # Hugo 配置
 ├── data/
-│   └── webstack.yml     # 导航数据（分类+链接）
+│   └── webstack.yml         # 导航数据 (1,436 条)
+├── layouts/                  # 自定义模板
+├── static/                   # 静态资源、logo、图标
 ├── themes/
-│   └── WebStack-Hugo    # 主题（git submodule）
-└── public/              # 构建输出（部署到 GitHub Pages）
+│   └── WebStack-Hugo/       # 主题 (子模块)
+└── archetypes/               # 内容模板
 ```
 
-## ⚠️ 声明
+> **分支说明**：`main` 分支存放构建后的静态站点 (GitHub Pages 部署)，`source` 分支存放 Hugo 工程源码。
 
-数据整理自 [AZeC4/TelegramGroup](https://github.com/AZeC4/TelegramGroup)。内容采集自网络，仅供学习参考。
+## 数据来源
+
+数据整理自 [AZeC4/TelegramGroup](https://github.com/AZeC4/TelegramGroup)，通过脚本解析 README 后生成 Hugo 数据文件。
+
+## 贡献指南
+
+欢迎提交新的 Telegram 群组、频道或机器人！
+
+1. Fork 本仓库
+2. 在 `data/webstack.yml` 中添加条目
+3. 提交 PR 到 `source` 分支
+
+## 相关项目
+
+| 项目 | 说明 |
+|------|------|
+| [tgnav](https://github.com/meshbit/tgnav) | Telegram 导航站（另一个版本） |
+
+## License
+
+MIT © [meshbit](https://github.com/meshbit)
