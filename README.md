@@ -5,8 +5,6 @@
 <p align="center">
   <a href="https://meshbit.github.io/TelegramNavigation/"><img src="https://img.shields.io/badge/在线访问-2AABEE?style=for-the-badge"></a>
   <a href="https://github.com/meshbit/TelegramNavigation/tree/source"><img src="https://img.shields.io/badge/源码-source--branch-orange?style=for-the-badge"></a>
-  <br>
-  <a href="https://github.com/meshbit/tgnav"><img src="https://img.shields.io/badge/相关项目-tgnav-lightgrey?style=for-the-badge"></a>
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/分类-15-2AABEE">
@@ -99,12 +97,6 @@ hugo --baseURL https://meshbit.github.io/TelegramNavigation/ --minify
 1. Fork 本仓库
 2. 在 `data/webstack.yml` 中添加条目
 3. 提交 PR 到 `source` 分支
-
-## 相关项目
-
-| 项目 | 说明 |
-|------|------|
-| [tgnav](https://github.com/meshbit/tgnav) | Telegram 导航站（另一个版本） |
 
 ## License
 
